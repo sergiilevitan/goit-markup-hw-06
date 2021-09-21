@@ -182,9 +182,13 @@ img {
 }
 
 .hero-btn,
-.modal-btn {
-  padding: 10px 32px;
-  margin-top: 30px;
+.modal-btn,
+.subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
   color: var(--primary-white-color);
@@ -196,7 +200,7 @@ img {
   font-family: inherit;
   cursor: pointer;
   border: transparent;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -471,7 +475,62 @@ img {
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.footer-join-us > span,
+.footer-subscribe > span {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 
+.footer-subscribe {
+  margin-left: 93px;
+  margin-top: 12px;
+  color: var(--primary-white-color);
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-btn span {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+.subscribe-form {
+  position: relative;
+}
+.subscribe-email {
+  height: 50px;
+  min-width: 358px;
+  margin-right: 12px;
+  padding-left: 16px;
+  background-color: var(--dark-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  color: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.subscribe-email-label {
+  position: absolute;
+  left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.subscribe-email:focus + .subscribe-email-label,
+.subscribe-email:not(:placeholder-shown) + .subscribe-email-label {
+  opacity: 0;
+}
 /* backdrop modal window */
 
 .backdrop {
@@ -539,7 +598,7 @@ img {
 
 .close-btn:hover svg,
 .close-btn:focus svg {
-  fill: var(--accent-color);
+  fill: var(--secondary-text-color);
 }
 
 .modal-form {
